@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Login page</title>
+      <style>
+            body{
+                 
+                  box-sizing: border-box;
+            }
+            .container {
+  padding: 16px;
+ 
+}
+            form {
+      border: 3px solid #f1f1f1;
+      width: 50%;
+     margin: auto;
+     border-radius: 5px;
+     font-family:cursive ;
+            }
+            h1{
+                  font-family:Comic Sans Ms;
+                  text-align:center; 
+                  font-size:20px;
+                 color:#121512;  
+            }
+            input[type=text], input[type=password]{
+      font-family:cursive ;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 10px;
+}
+input[type=button],input[type=reset]{
+  background-color: rgb(125, 221, 234);
+  border-radius: 3px;
+  padding-right: 10px;
+}
+input[type=button]:hover,input[type=reset]:hover{
+      background-color: antiquewhite;
+      border-radius: 5px;
+}
+
+ </style>
+    </head>
+    <body>
+          <h1>Login Page</h1>
+          
+          <form name="myForm" method="post" action="target.html">
+           <div class="container">
+     Username<input type="text" name="userid" id="userid" placeholder="username"/><br>
+     Password<input type="password" name="pswrd" placeholder="password"/><br>
+     <input type="button"  onclick="check(this.form)" value="Login"/>
+     <input type="reset"  value="Reset"/>
+     </form>
+</div>
+     <script language="javascript">
+     function check(form)
+     {
+    
+     if(form.userid.value && form.pswrd.value)
+      {
+    
+
+    var userid = document.getElementById("userid").value;
+    document.write("<h1><center>Welcome!!"+" " + userid + " "+ "login successfully!!</center></h1>");
+    document.write("<h3><center>Thanks for visiting..</center></h3>");
+
+
+
+
+       }
+       else
+       {
+        alert("Fill Username or Password ");
+        }
+       }
+    
+       </script>
+       </body>
+       </html>

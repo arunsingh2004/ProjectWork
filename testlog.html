@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Username</title>
+  <style>
+  #div1
+  {
+    width:500px;
+    margin:0px auto;
+    background-color: bisque;
+    margin-top: 30px;
+    padding: 20px;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="div1">
+  <h1>Login Here</h1>
+  <form name="loginForm" method="post" action="target.html">
+  Username &nbsp;<input type="text" name="username" id="username"/><br><br>
+  Password &nbsp;&nbsp;<input type="password" name="password" id="password"/>&nbsp;
+  <a href="testfarmer.html">
+    <input type="button" onclick="login(this.loginForm)" value="Login"/>
+  </a>
+  </form>
+  <script>
+ function login(loginForm)
+{
+   if(loginForm.username.value && loginForm.password.value) 
+   {
+    var username=document.getElementById("username").value;
+    document.write("<h1><center>Welcome"+" " + username + " "+ "you login successfully</center></h1>");
+    
+   }
+   else{
+    alert("Error")
+   }  
+  
+  }
+  </script>
+</div>
+</body>
+</html>
